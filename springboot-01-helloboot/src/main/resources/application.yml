@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+user:
+  name: huang
+  age: 18
+  Dog:
+    name: wangcai
+    age: 1
+  idos: {basketball: james, others: myself}
+  hobby:
+    - basketball
+    - girl

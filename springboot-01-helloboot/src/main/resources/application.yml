@@ -4,6 +4,7 @@ server:
 user:
   name: huang
   age: 18
+  mail: huangao23@163.com
   Dog:
     name: wangcai
     age: 1

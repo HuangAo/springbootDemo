@@ -2,7 +2,9 @@ package com.huang.pojo;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Email;
 import java.util.List;
 import java.util.Map;
 
@@ -11,10 +13,15 @@ import java.util.Map;
  */
 @Component
 @ConfigurationProperties(prefix = "user")
+@Validated //JSR303校验
 public class User {
 
     private String name;
     private int age;
+
+    @Email(message = "不是邮箱格式") //JSR303校验
+    private String mail;
+
     private Dog dog;
     private Map<String,Object> idos;
     private List<String> hobby;
@@ -59,11 +66,20 @@ public class User {
         this.hobby = hobby;
     }
 
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", mail=" + mail +
                 ", dog=" + dog +
                 ", idos=" + idos +
                 ", hobby=" + hobby +

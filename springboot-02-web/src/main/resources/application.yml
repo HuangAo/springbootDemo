@@ -47,3 +47,8 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     # 合并多个DruidDataSource的监控数据
     useGlobalDataSourceStat: true
+
+#整合mybatis
+mybatis:
+  type-aliases-package: com.huang.pojo #扫描别名包
+  mapper-locations: classpath:mybatis/mapper/*.xml

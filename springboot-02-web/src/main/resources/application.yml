@@ -52,3 +52,10 @@ spring:
 mybatis:
   type-aliases-package: com.huang.pojo #扫描别名包
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+#测试自定义starter
+huang:
+  hello:
+    prefix: Hi
+    suffix: fuck you
+
